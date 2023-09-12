@@ -62,29 +62,19 @@ $ python3 pair_plot.py
 ```
 Результат работы программы - файл _pair_plot.png_ в корневой папке проекта. <br>
 
-3. Чтобы вывести на экран информацию о параметрах, 
-из папки *<your_dir_on_local_computer>* выполните *train.py* с ключом _-h_:
-
+### Обучение и запуск модели
+5. Для получения информации о параметрах программы обучения модели, из корневой папки проекта нужно выполнить программу *logreg_train.py* с ключом _-h_:
 ```
-$ python3 train.py -h          
-usage: train.py [-h] [--path PATH] [--loss_control LOSS_CONTROL] [--epochs EPOCHS] [--learning_rate ETA] [--loss_graphics]
-                [--predict_data] [--animation] [--debug] [--quality]
+$ python3 logreg_train.py -h          
+usage: logreg_train.py [-h] [--gradient GRAD] [--debug] data
 
-options:
+positional arguments:
+  data                  Path to train data file
+
+optional arguments:
   -h, --help            show this help message and exit
-  --path PATH, -p PATH  Path to data file (data.csv by default)
-  --loss_control LOSS_CONTROL, -l LOSS_CONTROL
-                        Epoch iterations will stop while gets loss_control value(1e-12 by default)
-  --epochs EPOCHS, -e EPOCHS
-                        Set the epochs number (1500 by default)
-  --learning_rate ETA, -a ETA
-                        Set the learning rate eta (0.2 by default)
-  --loss_graphics, -g   Diagram with loss function depends on epochs
-  --predict_data, -t    Diagram with data values and line prediction
-  --animation, -c       Animation with prediction evolution while training
-  --debug, -d           Print info about each stage of program
-  --quality, -q         Model quality (R-square, MSE)
-
+  --gradient GRAD, -g GRAD
+                        Gradient descent method: "batch" (default), "mini_batch", "sgd"
 ```
 
 2. После успешной отработки программы обучения модели будет сформирован файл _coefs.csv_, в котором будут записаны найденные коэффициенты формулы вычисления предсказания цены автомобиля по заданному пробегу. <br>
