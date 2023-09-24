@@ -129,5 +129,4 @@ $ python3 evaluate.py
 <br><br>
 
 ## Результат в School 21
-
 <img width="1575" alt="image" src="https://github.com/dbadeev/dslr/assets/50623941/bb4e7e07-41ba-4538-876d-e3245fdf4801">
